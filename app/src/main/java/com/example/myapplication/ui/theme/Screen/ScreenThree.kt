@@ -1,7 +1,9 @@
 package com.example.myapplication.ui.theme.Screen
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,6 +20,7 @@ import com.example.myapplication.ui.theme.elements.Center_t
 import com.example.myapplication.ui.theme.elements.Image_1
 import com.example.myapplication.ui.theme.elements.Image_2
 import com.example.myapplication.ui.theme.elements.Image_3
+import com.example.myapplication.ui.theme.elements.Image_4
 import com.example.myapplication.ui.theme.elements.Image_6
 import com.example.myapplication.ui.theme.elements.Image_8
 import com.example.myapplication.ui.theme.elements.link
@@ -33,7 +36,7 @@ fun Screen_Two(modifier: Modifier = Modifier) {
 
         Column(modifier = Modifier.fillMaxSize()) {
 
-            Box(modifier = Modifier.fillMaxWidth()) {
+           Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement =  Arrangement.SpaceBetween) {
                 link(
                     modifier = Modifier.padding(
                         top = 49.dp,
@@ -43,9 +46,7 @@ fun Screen_Two(modifier: Modifier = Modifier) {
 
                 Image_1(
                     modifier = Modifier
-                        .align(Alignment.TopEnd)
-                        .padding(top = 49.dp, start = 260.dp)
-                        .fillMaxWidth()
+                        .padding(top = 49.dp)
 
                 )
             }
@@ -103,9 +104,9 @@ fun Screen_Two(modifier: Modifier = Modifier) {
                 horizontalAlignment = Alignment.CenterHorizontally
 
             ) {
-                Image_3(modifier = Modifier
+                Image_4(modifier = Modifier
                     .fillMaxWidth()
-                    .size(240.dp)
+                    .size(300.dp)
 
                 )
             }

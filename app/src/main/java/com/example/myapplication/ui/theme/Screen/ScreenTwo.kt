@@ -1,7 +1,9 @@
 package com.example.myapplication.ui.theme.Screen
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,7 +32,7 @@ fun Screen_two(modifier: Modifier = Modifier) {
 
         Column(modifier = Modifier.fillMaxSize()) {
 
-            Box(modifier = Modifier.fillMaxWidth()) {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 link(
                     modifier = Modifier.padding(
                         top = 49.dp,
@@ -40,9 +42,7 @@ fun Screen_two(modifier: Modifier = Modifier) {
 
                 Image_1(
                     modifier = Modifier
-                        .align(Alignment.TopEnd)
-                        .padding(top = 49.dp, start = 260.dp)
-                        .fillMaxWidth()
+                        .padding(top = 49.dp)
 
                 )
             }
@@ -99,7 +99,7 @@ fun Screen_two(modifier: Modifier = Modifier) {
                 horizontalAlignment = Alignment.CenterHorizontally
 
             ) {
-                Image_4(modifier = Modifier
+                Image_3(modifier = Modifier
                     .fillMaxWidth()
                     .size(320.dp)
 
