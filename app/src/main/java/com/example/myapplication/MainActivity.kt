@@ -7,23 +7,27 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.myapplication.ui.theme.MyApplicationTheme
+import com.example.myapplication.ui.theme.AppTheme
+import com.example.myapplication.ui.theme.Screen.AnalysisScreen
+import com.example.myapplication.ui.theme.WhiteColor
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MyApplicationTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+            AppTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = WhiteColor // Твой белый цвет фона из проекта
+                ) {
+                    // ПРИЗЫВАЕМ ВАШ ЭКРАН КАТАЛОГА!
+                    AnalysisScreen()
                 }
             }
         }
@@ -41,7 +45,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    MyApplicationTheme {
+    AppTheme{
         Greeting("Android")
     }
 }
