@@ -33,7 +33,7 @@ fun AppTheme(
         textblack = TextColorBlack,
         textDark = TextColorDark,
         textgrey = TextColorGray,
-        textgrey2 = TextColorGray2
+        textgrey2 = TextColorGray2,
     )
 
     val typography = AppTypography(

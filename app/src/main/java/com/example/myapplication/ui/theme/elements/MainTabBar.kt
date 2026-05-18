@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.sp
 import com.example.myapplication.R
 import com.example.myapplication.ui.theme.PrimaryColor
 import com.example.myapplication.ui.theme.SecondaryColor
+import com.example.myapplication.ui.theme.TabColor
 import com.example.myapplication.ui.theme.TextColorDark
 import com.example.myapplication.ui.theme.TextColorGray
 import com.example.myapplication.ui.theme.TextColorGray2
@@ -67,8 +68,8 @@ fun MainTabBar(
                 colors = NavigationBarItemDefaults.colors(
                     selectedIconColor = PrimaryColor,
                     selectedTextColor = PrimaryColor,
-                    unselectedIconColor = TextColorGray,
-                    unselectedTextColor = TextColorGray2,
+                    unselectedIconColor = TabColor,
+                    unselectedTextColor = TabColor,
                     indicatorColor = WhiteColor
                 )
             )
@@ -77,7 +78,7 @@ fun MainTabBar(
 
 }
 
-@Preview(showBackground = true, name = "Нижнее меню")
+@Preview()
 @Composable
 fun MainTabBarPreview() {
     MainTabBar(

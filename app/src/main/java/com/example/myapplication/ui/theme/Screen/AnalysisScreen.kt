@@ -24,6 +24,7 @@ import androidx.compose.runtime.setValue
 import com.example.myapplication.ui.theme.elements.AddButton
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.Surface
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapplication.ui.theme.elements.testFilters
 import components.AnalysisCard
@@ -36,60 +37,67 @@ fun AnalysisScreen(modifier: Modifier = Modifier) {
     var currentTab by remember { mutableStateOf("Анализы") }
     var selectedFilter by remember { mutableStateOf("Популярные") }
 
-    Scaffold(
+    Surface(
         modifier = Modifier.fillMaxSize(),
-        bottomBar = {
-            MainTabBar(
-                currentRoute = currentTab,
-                onTabSelected = { clickedTab -> currentTab = clickedTab }
-            )
-        }
+        color = WhiteColor
+    ) {
+        Scaffold(
+            modifier = Modifier.fillMaxSize(),
+            bottomBar = {
+                MainTabBar(
+                    currentRoute = currentTab,
+                    onTabSelected = { clickedTab -> currentTab = clickedTab }
+                )
+            }
 
-    ) { innerPadding ->
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(WhiteColor)
-                .padding(innerPadding)
-        ) {
-            LazyRow(
+        ) { innerPadding ->
+            Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 16.dp, bottom = 16.dp),
-                contentPadding = PaddingValues(horizontal = 16.dp),
-                horizontalArrangement = Arrangement.spacedBy(16.dp)
+                    .background(WhiteColor)
+                    .padding(innerPadding)
             ) {
-                items(testFilters) { filter ->
-                    com.example.myapplication.ui.theme.elements.FilterChip(
-                        text = filter,
-                        isSelected = filter == selectedFilter
-                    )
+                LazyRow(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 16.dp, bottom = 16.dp),
+                    contentPadding = PaddingValues(horizontal = 16.dp),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp)
+                ) {
+                    items(testFilters) { filter ->
+                        com.example.myapplication.ui.theme.elements.FilterChip(
+                            text = filter,
+                            isSelected = filter == selectedFilter
+                        )
+                    }
+                }
+
+                LazyColumn(
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(
+                        start = 16.dp,
+                        end = 16.dp,
+                        bottom = innerPadding.calculateBottomPadding() + 16.dp
+                    ),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    items(testAnalysisList) { item ->
+                        AnalysisCard(
+                            title = item.title,
+                            days = item.days,
+                            price = item.price,
+                            onAddClick = {},
+                            modifier = Modifier.fillMaxWidth()
+                        )
+
+                    }
                 }
             }
 
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(
-                    start = 16.dp,
-                    end = 16.dp,
-                    bottom = innerPadding.calculateBottomPadding() + 16.dp
-                ),
-                verticalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                items(testAnalysisList) { item ->
-                    AnalysisCard(
-                        title = item.title,
-                        days = item.days,
-                        price = item.price,
-                        onAddClick = {},
-                        modifier = Modifier.fillMaxWidth()
-                    )
-
-                }
-            }
         }
-
     }
+
+
 
 }
 

@@ -36,6 +36,7 @@ fun FullScreen(
 ) {
     Surface(
         modifier = Modifier.fillMaxSize()
+
     ) {
 
         Column(modifier = Modifier.fillMaxSize()) {
@@ -158,6 +159,6 @@ fun ThirdScreen(modifier: Modifier = Modifier) {
 @Composable
 private fun FullScrenPrev() {
     // FirstScreen()
-    // SecondScreen()
-     ThirdScreen()
+     SecondScreen()
+     //ThirdScreen()
 }

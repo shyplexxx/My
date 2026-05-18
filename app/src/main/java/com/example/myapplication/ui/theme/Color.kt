@@ -31,10 +31,12 @@ var ErrorColor = Color(0xFFED3A3A)
 var TextColorDark = Color(0xFF3A3A3A)
 var TextColorBlack = Color(0xFF141414)
 
-var TextColorGray = Color(0xFFCFCFCF)
+var TextColorGray = Color(0xffF5F5F9)
 var TextColorGray2 = Color(0xFFA7A7A7)
 
 var WhiteColor = Color(0xFFFFFFFF)
+
+var TabColor = Color(0xFFB8C1CC)
 
 @Immutable
 data class AppColors(
@@ -47,7 +49,7 @@ data class AppColors(
     val textblack: Color,
     val textDark: Color,
     val textgrey: Color,
-    val textgrey2: Color
+    val textgrey2: Color,
 )
 
 val LocalAppColors = staticCompositionLocalOf {
