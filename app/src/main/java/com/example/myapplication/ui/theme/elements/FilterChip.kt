@@ -17,6 +17,7 @@ import com.example.myapplication.ui.theme.PrimaryColor
 import com.example.myapplication.ui.theme.TextColorDark
 import com.example.myapplication.ui.theme.TextColorGray
 import com.example.myapplication.ui.theme.TextColorGray2
+import com.example.myapplication.ui.theme.WhiteColor
 
 @Composable
 fun FilterChip(
@@ -27,15 +28,13 @@ fun FilterChip(
     Box(
         contentAlignment = Alignment.Center,
         modifier = modifier
-            .clip(RoundedCornerShape(12.dp)) // Скругление, как на Вашем холсте, милорд
-            // Если выбран — подставляем нежно-лиловый/голубой, если нет — светло-серый (TextColorGray2)
-            .background(if (isSelected) TextColorGray else TextColorGray)
-            .padding(horizontal = 20.dp, vertical = 14.dp) // Внутренние покои чипса
+            .clip(RoundedCornerShape(12.dp))
+            .background(if (isSelected) PrimaryColor else TextColorGray)
+            .padding(horizontal = 20.dp, vertical = 14.dp)
     ) {
         Text(
             text = text,
-            // Если выбран — цвет кнопок (PrimaryColor), если нет — темный текст (TextColorDark)
-            color = if (isSelected) TextColorGray2 else TextColorGray2,
+            color = if (isSelected) WhiteColor else TextColorGray2,
             fontSize = 15.sp,
             fontWeight = FontWeight.Medium
         )

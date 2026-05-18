@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapplication.ui.theme.AppTheme
 import com.example.myapplication.ui.theme.Screen.AnalysisScreen
 import com.example.myapplication.ui.theme.WhiteColor
+import com.example.myapplication.ui.theme.elements.MainTabBar
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,9 +25,9 @@ class MainActivity : ComponentActivity() {
             AppTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = WhiteColor // Твой белый цвет фона из проекта
+                    color = WhiteColor
                 ) {
-                    // ПРИЗЫВАЕМ ВАШ ЭКРАН КАТАЛОГА!
+
                     AnalysisScreen()
                 }
             }

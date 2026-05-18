@@ -1,11 +1,13 @@
 package components
 
+import android.content.res.Resources
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -52,10 +54,9 @@ fun AnalysisCard(
 
             Text(
                 text = title,
+                style = MaterialTheme.typography.titleMedium,
                 color = TextColorDark,
-                fontSize = 18.sp,
-                fontWeight = FontWeight.Medium,
-                lineHeight = 24.sp
+                
             )
 
             Spacer(modifier = Modifier.height(20.dp))
@@ -68,17 +69,17 @@ fun AnalysisCard(
                 Column {
                     Text(
                         text = days,
+                        style = MaterialTheme.typography.bodyMedium,
                         color = TextColorGray2,
-                        fontSize = 14.sp
                     )
 
                     Spacer(modifier = Modifier.height(6.dp))
 
                     Text(
                         text = price,
+                        style = MaterialTheme.typography.titleLarge,
                         color = TextColorDark,
-                        fontSize = 22.sp,
-                        fontWeight = FontWeight.Bold
+
                     )
                 }
 

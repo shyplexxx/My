@@ -52,13 +52,12 @@ fun AnalysisScreen(modifier: Modifier = Modifier) {
                 .background(WhiteColor)
                 .padding(innerPadding)
         ) {
-            // 👑 ВЕНЕЦ ЭКРАНА: Строка фильтров, добавленная по Вашему указу
             LazyRow(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 16.dp, bottom = 16.dp), // Отступы сверху от шторки и снизу до карточек
-                contentPadding = PaddingValues(horizontal = 16.dp), // Отступ для крайних чипсов
-                horizontalArrangement = Arrangement.spacedBy(16.dp) // Расстояние между чипсами
+                    .padding(top = 16.dp, bottom = 16.dp),
+                contentPadding = PaddingValues(horizontal = 16.dp),
+                horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 items(testFilters) { filter ->
                     com.example.myapplication.ui.theme.elements.FilterChip(

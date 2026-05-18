@@ -4,6 +4,7 @@ import android.content.res.Resources
 import android.health.connect.datatypes.ExerciseRoute
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemColors
@@ -52,8 +53,7 @@ fun MainTabBar(
                 label = {
                     Text(
                         text = item.title,
-                        fontSize = 11.sp,
-                        fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal
+                        style = MaterialTheme.typography.bodySmall,
                     )
                 },
                 icon = {
@@ -80,7 +80,6 @@ fun MainTabBar(
 @Preview(showBackground = true, name = "Нижнее меню")
 @Composable
 fun MainTabBarPreview() {
-    // Передаем фиксированное состояние "Анализы" для отображения в дизайнере
     MainTabBar(
         currentRoute = "Анализы",
         onTabSelected = {}

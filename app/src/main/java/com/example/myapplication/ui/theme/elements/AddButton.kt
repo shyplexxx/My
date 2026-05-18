@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -26,7 +27,7 @@ fun AddButton(
     Box(
         contentAlignment = Alignment.Center,
         modifier = modifier
-            .clip(RoundedCornerShape(12.dp))
+            .clip(RoundedCornerShape(10.dp))
             .background(PrimaryColor)
             .clickable { onClick() }
             .padding(horizontal = 24.dp, vertical = 12.dp)
@@ -34,9 +35,15 @@ fun AddButton(
     ) {
         Text(
             text = "Добавить",
-            color = Color.White,
-            fontSize = 16.sp,
-            fontWeight = FontWeight.Medium
+            style = MaterialTheme.typography.bodyMedium,
+            color = Color.White
         )
     }
+}
+
+
+@Preview
+@Composable
+private fun AddButtonPrev() {
+    AddButton(onClick = {})
 }

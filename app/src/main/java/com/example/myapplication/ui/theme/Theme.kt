@@ -82,8 +82,8 @@ fun AppTheme(
         titleLarge = TextStyle(
             fontFamily = FontFamily.Default,
             fontWeight = FontWeight.SemiBold,
-            fontSize = 20.sp,
-            lineHeight = 20.sp,
+            fontSize = 17.sp,
+            lineHeight = 24.sp,
             letterSpacing = 0.sp),
 
         titleMedium = TextStyle(
@@ -111,14 +111,14 @@ fun AppTheme(
             fontFamily = FontFamily.Default,
             fontWeight = FontWeight.W600,
             fontSize = 14.sp,
-            lineHeight = 16.sp,
+            lineHeight = 14.sp,
             letterSpacing = 0.sp),
 
         bodySmall = TextStyle(
             fontFamily = FontFamily.Default,
-            fontWeight = FontWeight.W500,
+            fontWeight = FontWeight.W400,
             fontSize = 12.sp,
-            lineHeight = 16.sp,
+            lineHeight = 14.sp,
             letterSpacing = 0.sp)
     )
 
