@@ -16,7 +16,6 @@ val Blue = Color(0xFF57A9FF)
 
 val Green = Color(0xFF00B712)
 
-val Gray = Color(0xFF939396)
 
 
 
@@ -37,6 +36,16 @@ var TextColorGray2 = Color(0xFFA7A7A7)
 var WhiteColor = Color(0xFFFFFFFF)
 
 var TabColor = Color(0xFFB8C1CC)
+
+val PrimaryButtonColor = Color(0xFF1A6FEE)
+val AccentColor = Color(0xFF00B712)
+val ButtonColorText = Color.White
+val transp = Color.Transparent
+val Gray = Color(0xFFADADAD);
+val Unactive  = Color(0xffC9D4FB);
+val unactivetext = Color(0xffEBEBEB);
+
+var oulinne = Color(0xffF5F5F9);
 
 @Immutable
 data class AppColors(
