@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapplication.ui.theme.AppTheme
 import com.example.myapplication.ui.theme.Screen.AnalysisScreen
 import com.example.myapplication.ui.theme.Screen.TabScreen
+import com.example.myapplication.ui.theme.ScrenLogin
 import com.example.myapplication.ui.theme.TabColor
 import com.example.myapplication.ui.theme.WhiteColor
 import com.example.myapplication.ui.theme.elements.MainTabBar
@@ -30,7 +31,7 @@ class MainActivity : ComponentActivity() {
                     color = WhiteColor
                 ) {
 
-                    TabScreen()
+                    ScrenLogin()
                 }
             }
         }

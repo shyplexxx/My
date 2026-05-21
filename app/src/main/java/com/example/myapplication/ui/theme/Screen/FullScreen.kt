@@ -155,10 +155,20 @@ fun ThirdScreen(modifier: Modifier = Modifier) {
 
 
 
-@Preview
+@Preview(device = "id:pixel_9_pro")
 @Composable
 private fun FullScrenPrev() {
-    // FirstScreen()
-     SecondScreen()
-     //ThirdScreen()
+     FirstScreen()
+
+}
+
+@Preview(device = "spec:width=1920dp,height=1080dp,dpi=160")
+@Composable
+private fun FullScrenPrev1() {
+    SecondScreen()
+}
+@Preview
+@Composable
+private fun FullScrenPrev2() {
+    ThirdScreen()
 }

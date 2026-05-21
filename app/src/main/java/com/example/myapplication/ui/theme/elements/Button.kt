@@ -49,5 +49,5 @@ fun Button(
 @Preview
 @Composable
 private fun ButtonPreview() {
-    Button(onClick = {}, text = "Войти c Яндекс");
+    Button(onClick = {}, text = "Войти");
 }
